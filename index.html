@@ -36,8 +36,22 @@ blah, blah, blah, blah
 	-->
       
       <script>
-      	
-      	<!-- Add Javascript functions here -->
+	var coldCount = 0;
+	var fluCount = 0;
+	      
+	function addCold(){
+		coldCount = coldCount+1;
+	}
+	function addFlu(){
+		flueCount = fluCount+1;
+	}
+	      
+	function calcResult(){
+		var pCold = (coldCount/4)*100;
+		var pFlu = (fluCount/4)*100;
+		var resultText = document.getElementById("results");
+		resultText.innerHTML = "Probability it is a cold = "+pCold +"%" + "<br> Probability it is a cold = " +pFlu +"%";
+	}
       	
 	// The following code lets you know when the file was last modified. 
         // This will help you know if you are looking at the new version of the file or if there is a delay on GitHub.
@@ -57,6 +71,22 @@ blah, blah, blah, blah
    </head>
 	
 <body>  
+<!-- Start of welcome page -->
+	<div data-role="page" id="welcome">
+
+		<div data-role="header">
+			<h1>Hello!</h1>
+		</div><!-- /header -->
+
+		<div role="main" class="ui-content">
+			<p>The following survey can help you determine if you have a cold or the flu.</p>
+			<a href="#question1" class="ui-btn">Start</a>
+		</div><!-- /content -->
+
+		<div data-role="footer" data-position="fixed">
+			<h4>Page 1 Footer</h4>
+		</div><!-- /footer -->
+	</div><!-- /welcome page -->
 	
 <!-- Start of Page 1 -->
 	<div data-role="page" id="question1">
