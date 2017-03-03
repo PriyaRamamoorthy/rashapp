@@ -75,7 +75,7 @@ blah, blah, blah, blah
 	<div data-role="page" id="welcome">
 
 		<div data-role="header">
-			<h1>Hello!</h1>
+			<h1>Cold vs. Flu</h1>
 		</div><!-- /header -->
 
 		<div role="main" class="ui-content">
@@ -96,8 +96,9 @@ blah, blah, blah, blah
 		</div><!-- /header -->
 
 		<div role="main" class="ui-content">
-			<p>This is a paragraph in the main/content section of Page 1.</p>
-			<a href="#question2" class="ui-btn">Yes</a>
+			<p>Was the onset of the condition sudden/very quick?</p>
+			<a href="#question2" onclick = "addFlu();" data-role="button">Yes</a>
+			<a href="#question2" onclick = "addCold();" data-role="button">No</a>
 			<!--adds one to the ____ count-->
 		</div><!-- /content -->
 
@@ -114,8 +115,9 @@ blah, blah, blah, blah
 		</div><!-- /header -->
 
 		<div role="main" class="ui-content">
-			<p>This is a paragraph in the main/content section of Page 2.</p>
-			<p><a href="#question3" class="ui-btn">Yes</a></p>
+			<p>Do you have moderate to severe aches and/or pains?</p>
+			<a href="#question3" onclick = "addFlu();" data-role="button">Yes</a>
+			<a href="#question3" onclick = "addCold();" data-role="button">No</a>
 		</div><!-- /content -->
 
 		<div data-role="footer" data-position="fixed">
@@ -131,8 +133,9 @@ blah, blah, blah, blah
 		</div><!-- /header -->
 
 		<div role="main" class="ui-content">
-			<p>This is a paragraph in the main/content section of Page 2.</p>
-			<p><a href="#question4" class="ui-btn">Yes</a></p>
+			<p>Do you suffer from extreme exhaustion?</p>
+			<a href="#question4" onclick = "addFlu();" data-role="button">Yes</a>
+			<a href="#question4" onclick = "addCold();" data-role="button">No</a>
 		</div><!-- /content -->
 
 		<div data-role="footer" data-position="fixed">
@@ -148,15 +151,32 @@ blah, blah, blah, blah
 		</div><!-- /header -->
 
 		<div role="main" class="ui-content">
-			<p>This is a paragraph in the main/content section of Page 2.</p>
-			<p><a href="#question3" class="ui-btn">Yes</a></p>
+			<p>Do you have a high fever (at or excedding 100-102 F) that is long lasting (3 - 4 days)?</p>
+			<a href="#results" onclick = "addFlu();" data-role="button">Yes</a>
+			<a href="#results" onclick = "addCold();" data-role="button">No</a>
 		</div><!-- /content -->
 
 		<div data-role="footer" data-position="fixed">
 			<h4>Page 2 Footer</h4>
 		</div><!-- /footer -->
 	</div><!-- /page 4-->
-	   
+	
+<!-- Start of Results -->
+	<div data-role="page" id="results">
+
+		<div data-role="header">
+			<h1>Results!</h1>
+		</div><!-- /header -->
+
+		<div data-role= "main": class="ui-content">
+			<p id="results"></p>
+			<a data-role = "button" onclick="calcResults();">Calculate Results</a>
+		</div><!-- /when results button is pressed, resultsCalc fuction is called and therefore statement is printed-->
+
+		<div data-role="footer" data-position="fixed">
+			<h4>Page 2 Footer</h4>
+		</div><!-- /footer -->
+	</div><!-- /page 4-->
 	   
    </body>
 </html>
