@@ -49,7 +49,7 @@ Results can not replace medical findings from certerfied healthcare provders. Th
 	var rubella_count=0; //variable records how many times an answer corresponding to the potential of rubella was chosen
 	var measles_count=0; //variable records how many times an answer corresponding to the potential of measles was chosen
 	var roseola_count=0; //variable records how many times an answer corresponding to the potential of roseola was chosen
-	var none_count =0; // variable records how many times an answer corresponding to none of the above conditions was chosen
+	var other_count =0; // variable records how many times an answer corresponding to none of the above conditions was chosen
 	var rubella_percent=0; //variable records probability of condition being rubella
 	var measles_percent=0; //variable records proability of condition being measles
 	var roseola_percent=0; //variable records probability of condition being roseola
@@ -112,3 +112,20 @@ function other_add(){none_count=none_count+1;} // this function adds a count to 
 		<div data-role="footer" data-position="fixed">
 		</div><!-- /footer -->
 	</div><!-- /page 1 -->
+	
+<!-- Start of Page 2 -->
+	<div data-role="page" id="question2">
+
+		<div data-role="header">
+			<h1>Background</h1>
+			
+		</div><!-- /header -->
+
+		<div role="main" class="ui-content">
+			
+			<p>Have they received the MMR vaccine?<p>
+			<a href="#question3"onclick="roseola_add();"data-role="button">Yes</a>
+			<a href="#question3"onclick="other_add();"data-role="button">Yes</a>
+			<a href="#question3"onclick="measles_add();"data-role="button">No</a>
+			<a href="#question3"onclick="rubella_add();"data-role="button">No</a>
+			
