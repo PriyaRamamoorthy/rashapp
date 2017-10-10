@@ -54,6 +54,12 @@ Results can not replace medical findings from certerfied healthcare provders. Th
 	var measles_percent=0; //variable records proability of condition being measles
 	var roseola_percent=0; //variable records probability of condition being roseola
 	var other_percent=0; //variable records probability of condition being anything other than rubella, measles, roseola
+	
+	function rubella_add(){rubella_count=rubella_count+1;} // this function adds a count to the rubella tally every time an answer potentially corresponding to rubella is selected
+	function measles_add(){measles_count=measles_count+1;} // this function adds a count to the measles tally every time an answer potentially corresponding to measles is selected 
+	function roseola_add(){roseola_count=roseola_count+1;} // this function adds a count to the roseola tally every time an answer potentially corresponding to roseola is selected 
+	function other_add(){none_count=none_count+1;) // this function adds a count to the other tally every time an answer does not correspond to rubella, measles, or roseola
+	
 	   </script>
       
       <style>	
